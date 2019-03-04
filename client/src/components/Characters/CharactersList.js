@@ -8,7 +8,7 @@ export default class CharactersList extends Component {
   state = {
     AllCharacters: [],
     SearchString: "",
-    url: `http://gateway.marvel.com/v1/public/characters?limit=100&ts=1&apikey=11a9a9e994cc5718f9fe92b73c85f0a0&hash=584bcbd30cd3774edb530ab623f40f0c`
+    url: `https://gateway.marvel.com/v1/public/characters?limit=100&ts=1&apikey=11a9a9e994cc5718f9fe92b73c85f0a0&hash=584bcbd30cd3774edb530ab623f40f0c`
   };
   constructor() {
     super();
@@ -18,7 +18,7 @@ export default class CharactersList extends Component {
   urlChooser = () => {
     if (this.state.SearchString !== "") {
       this.setState({
-        url: `http://gateway.marvel.com/v1/public/characters?nameStartsWith=${
+        url: `https://gateway.marvel.com/v1/public/characters?nameStartsWith=${
           this.state.SearchString
         }&limit=100&ts=1&apikey=11a9a9e994cc5718f9fe92b73c85f0a0&hash=584bcbd30cd3774edb530ab623f40f0c`
       });
