@@ -17,7 +17,7 @@ app.use((err, req, res, next) => {
 app.get("*", (req, res) => {
     res.sendFile(path.join(_dirname, "client","build","index.html"))
 })
-app.listen(process.env.PORT, () => {
+app.listen(process.env.PORT || 5000, () => {
     console.log('server is live on port ' + process.env.PORT);
 })
 mongoose.connect(process.env.MONGODB_URI, { useNewUrlParser:true}, () => {
